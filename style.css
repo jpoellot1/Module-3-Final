@@ -496,3 +496,114 @@ img {
 #values .btn {
     margin-top: 48px;
 }
+
+/* Pricing */
+
+#pricing .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pricing .section__para {
+    max-width: 576px;
+}
+
+.plans{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    position:relative;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.plan {
+    width: calc(100%/3);
+    max-width: 24rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255 255 255);
+    border-radius: 5px;
+    border: 1px solid rgb(229, 231, 235);
+    align-items: center;
+    margin-left: 32px;
+    padding: 0 32px;
+    color: rgb(26 32 44);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.plan__stripe {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 8px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.plan__name,
+.plan__price,
+.plan__duration {
+    font-weight: bold;
+}
+
+.plan__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.plan__name {
+    font-size: 20px;
+}
+
+.plan__price{
+    font-size: 48px;
+    margin: 16px 0;
+}
+
+.plan__duration{
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+}
+
+.plan__duration {
+    color: #a0aec0;
+}
+
+.plan__middle {
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+}
+
+.plan__target {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.plan__feature {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #718096;
+    line-height: 1.5;
+}
+
+.plan__btn {
+    background-color: rgb(100 21 255);
+    color: rgb(247 250 252);
+    transition: all 300ms ease;
+    border-radius: 9999px;
+    padding: 12px 48px;
+    margin: 24px;
+    font-weight: 700;
+}
