@@ -721,6 +721,9 @@ img {
 
 .testimonial__rating {
     margin-bottom: 16px;
+}
+
+.testimonial__rating i {
     color: #fabf2a;
 }
 
