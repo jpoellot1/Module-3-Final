@@ -4,7 +4,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
-    color: #243e63;
 }
 
 html {
@@ -18,6 +17,11 @@ body {
 
 nav {
     padding: 32px;
+    display: flex;
+}
+
+section {
+    padding: 0 32px;
 }
 
 .container {
@@ -99,7 +103,16 @@ img {
     width: 100%;
 }
 
+
+.feature__title,
+.nav__link,
+.nav__logo--title {
+    color: #243e63;
+}
+
 /* Nav Bar */
+
+
 
 .nav__row {
     display: flex;
@@ -162,6 +175,85 @@ img {
 .nav__link--login {
     margin: 0 24px 0 48px;  
     padding: 4px 0 0;
+}
+
+.btn__menu {
+    background-color: transparent;
+    border: none;
+    display: none;
+    transition: all 300ms ease;
+    color:#243e63;
+}
+
+.btn__menu svg {
+    height: 24px;
+    width: 24px;
+}
+
+.btn__menu--close {
+    position: fixed;
+    top: 24px;
+    right: 18px;
+}
+
+.btn__menu svg:hover {
+  color:#6415ff;
+}
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 378px;
+    margin: 24px 16px;
+    padding: 32px;
+    background-color: #fff;
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 8px;
+    z-index: 4;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(300%);
+    transition: all 300ms ease;
+}
+
+.menu--open {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.menu--open .menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.menu__links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__link {
+    color: #1a202c;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 8px 0;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.menu__link--primary {
+    color:#f7fafc;
+    padding: 12px 32px;
+    background: #6415ff;
+    border-radius: 500px;
+    border: none;
 }
 
 /* Header */
@@ -482,10 +574,6 @@ img {
     background-color:#feb2b2;
 }
 
-.value:nth-child(2) .value__img{
-    color:#feb2b2;  
-}
-
 .value__img {
     width: 20px;
     height: 20px;
@@ -721,13 +809,10 @@ img {
 
 .testimonial__rating {
     margin-bottom: 16px;
-}
-
-.testimonial__rating i {
     color: #fabf2a;
 }
 
-.testimonial__rating--title {
+.testimonial__rating--title {   
     color: #4a5568;
     font-weight: 700;
     font-size: 20px;    
@@ -781,8 +866,8 @@ img {
     display: flex;
     background-color: #edf2f7;
     color: #6415ff;
-    height: 40px;
-    width: 40px;
+    height: 48px;
+    width: 48px;
     border-radius: 50%;
     margin: 0 12px;
     padding: 16px;
@@ -790,6 +875,10 @@ img {
     align-items: center;
     border: none;
     transition: all 300ms ease;
+}
+
+.testimonial__btn svg {
+    height: 16px;
 }
 
 .testimonial__btn:hover {
@@ -1036,4 +1125,104 @@ footer {
   transform: translateX(72px) translateY(192px);
   z-index: 1;
   opacity: 0.5;
+}
+
+
+@media (max-width: 1024px) {
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    .header__row {
+        flex-direction: column;
+        align-items: center;
+        max-height: 100%;
+    }
+
+    .header__description,
+    .header__img--wrapper {
+        width: 100%;
+        max-width: 512px;
+        margin: 0 auto;
+    }
+
+    .header__description {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__description--para {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .features{
+        max-width: 768px;
+    }
+
+    .feature {
+        width: calc(100%/2);
+    }
+
+    .feature__row {
+        padding: 32px 8px;
+        margin: 0 16px;
+    }
+
+    .quality__description,
+    .quality__img--wrapper {
+        width: calc(100%/2);
+    }
+
+    .quality__description{
+        margin-right: 0px;
+        padding-right: 48px;
+    }
+
+    .quality__section--title {
+        font-size: 36px;
+    }
+
+    #steps .section__title {
+        font-size: 36px;
+    }
+
+    .step__para {
+        font-size: 14px;
+    }
+
+    #values .section__title {
+        font-size: 36px;
+    }
+
+    .values__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plans__blob {
+        left: 0;
+    }
+
+
+
+    #pricing .section__title,
+    #pricing .section__para {
+        letter-spacing: 1.2px;
+        text-align: center;
+    }
 }
